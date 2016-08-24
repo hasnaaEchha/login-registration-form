@@ -1,5 +1,5 @@
 angular.module("cnGroup").factory("identity",["$cookieStore","$state","$window","$localStorage",identity]);
-function identity($cookieStore,$location, $state,$window,$localStorage){
+function identity($cookieStore, $state,$window,$localStorage){
     return {
         currentUser:  $cookieStore.get('client'),
         isAuthenticated: function(){
