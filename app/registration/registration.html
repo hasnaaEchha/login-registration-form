@@ -1,0 +1,46 @@
+
+<div class="jumbotron" id="welcome">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2>Sign Up:</h2></div>
+        <div class="panel-body">
+            <div class="col-md-12">
+                <alert-message is-valid="vm.validUsername" error-message="vm.usernameMsgError"></alert-message>
+                <alert-message is-valid="vm.validPassword" error-message="vm.passwordMsgError"></alert-message>
+                <alert-message is-valid="vm.validConfPassword" error-message="vm.confPasswordMsgError"></alert-message>
+            </div>
+
+            <div ng-show="vm.error" class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="false" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>Error!</strong> Check the user name and the password.
+            </div>
+            <form class="form-horizontal" name="authForm" ng-submit="vm.signUp()">
+                <div class="form-group">
+                    <label for="inputName" class="col-md-2 control-label">User name:</label>
+                    <div class="col-md-8">
+                        <input type="text"  ng-model="vm.username" class="form-control" id="inputName" name="inputName" placeholder="memberX" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword1" class="col-md-2 control-label">Password</label>
+                    <div class="col-md-8">
+                        <input type="password" ng-model="vm.firstPassword"class="form-control" id="inputPassword1" placeholder="********" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword2" class="col-md-2 control-label">Repeat Password</label>
+                    <div class="col-md-8">
+                        <input type="password" ng-model="vm.confPassword"class="form-control" id="inputPassword2" placeholder="********" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" ng-disabled="authForm.$invalid || (!vm.validConfPassword|| !vm.validPassword || !vm.validUsername)"  class="btn btn-default">Sign in</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

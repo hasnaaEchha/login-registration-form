@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="cnGroup">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="contents/css/bootstrap.min.css" rel="stylesheet">
+    <link href="contents/css/site.css" rel="stylesheet">
+    <link href="contents/css/toastr.css" rel="stylesheet">
+
+
+    <!--Angular module-->
+
+    <script src="vendors/angular/angular.min.js" ></script>
+    <script src="vendors/angular/ui-bootstrap-tpls-0.13.3.min.js" ></script>
+    <script src="vendors/angular/angular-ui-router.js"></script>
+    <script src="vendors/angular/angular-resource.min.js"></script>
+    <script src="vendors/angular/angular-cookies.js"></script>
+    <script src="vendors/angular/ngStorage.min.js"></script>
+    <script src="app/app.js"></script>
+    <!---->
+    <script src="vendors/jquery.min.js"></script>
+    <script src="vendors/toastr.js"></script>
+    <script src="vendors/bootstrap.min.js"></script>
+    <!--Bootstrap js file-->
+
+    <!---->
+    <!--Controllers-->
+    <script src="app/login/LoginCtrl.js"></script>
+    <script src="app/registration/RegistrationCtrl.js"></script>
+    <!---->
+    <!--directives-->
+    <script src="app/common/alertDirective.js"></script>
+
+    <!--Services-->
+    <script src="app/common/resources.js"></script>
+    <script src="app/common/identifier.js"></script>
+    <script src="app/common/notifier.js"></script>
+    <script src="app/login/manageLogin.js"></script>
+    <script src="app/registration/manageRegistration.js"></script>
+    <!----->
+
+    <title>Welcome Space</title>
+</head>
+<body>
+
+<div  ui-view></div>
+
+<footer></footer>
+</body>
+</html>
