@@ -3,5 +3,5 @@
     -<<common>> contain directives and services that can be used in any module
     -<<login>>, <<registration>> and <<welcome>> modules
     data/clients file contain information about the client allowed to connect to the app
-   i've tried to make each controller as clean as possible by implementing a service for each module to contain                                                                                  
+   i've tried to make each controller as clean as possible by implementing a service for each module to contain
     business logic
